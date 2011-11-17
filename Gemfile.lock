@@ -1,11 +1,18 @@
 GIT
-  remote: https://blambeau@github.com/blambeau/viiite.git
-  revision: c448bdcaf1c32481b6a9a53c5e5cd3180ccbaea5
+  remote: https://github.com/eregon/epath.git
+  revision: eab4647c92f39d8cbbc281ea7bd6cce6006aad34
+  specs:
+    epath (0.0.1)
+
+PATH
+  remote: ../viiite
   specs:
     viiite (0.3.0)
       alf (~> 0.10.1)
+      epath
       gnuplot (~> 2.3.6)
       json
+      sfl (~> 2.0)
 
 GEM
   remote: http://rubygems.org/
@@ -17,11 +24,15 @@ GEM
     gnuplot (2.3.6)
     highline (1.6.8)
     json (1.6.1)
+    json (1.6.1-java)
     myrrha (1.2.1)
     quickl (0.4.1)
+    sfl (2.0)
 
 PLATFORMS
+  java
   ruby
 
 DEPENDENCIES
+  epath!
   viiite!
