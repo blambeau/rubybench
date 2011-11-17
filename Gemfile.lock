@@ -1,0 +1,27 @@
+GIT
+  remote: https://blambeau@github.com/blambeau/viiite.git
+  revision: c448bdcaf1c32481b6a9a53c5e5cd3180ccbaea5
+  specs:
+    viiite (0.3.0)
+      alf (~> 0.10.1)
+      gnuplot (~> 2.3.6)
+      json
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    alf (0.10.1)
+      highline (~> 1.6.2)
+      myrrha (~> 1.2.1)
+      quickl (~> 0.4.1)
+    gnuplot (2.3.6)
+    highline (1.6.8)
+    json (1.6.1)
+    myrrha (1.2.1)
+    quickl (0.4.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  viiite!
