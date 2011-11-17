@@ -9,9 +9,13 @@ Viiite.bench do |b|
     2500.times do |i|
       (dir/"bogus#{i}.rb").write("")
     end
-    cmd = "viiite run " + (Path.dir/'require-sub.rb')
-    b.report_native(cmd, {:chdir => dir.to_s}) do |io|
-      Alf::Reader.reader(io).to_rel
+    b.range_over((1..5).map{|n| n*500}, :size) do |size|
+      env  = {"size" => size.to_s}
+      cmd  = "viiite run " + (Path.dir/'require-sub.rb')
+      opts = {:chdir => dir.to_s}
+      b.report_native(env, cmd, opts) do |io|
+        Alf::Reader.reader(io).to_rel
+      end
     end
   end
 end
